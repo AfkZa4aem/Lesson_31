@@ -16,3 +16,7 @@ end
 get '/about' do
   erb :about
 end
+
+get '/menu' do
+	erb :menu
+end
