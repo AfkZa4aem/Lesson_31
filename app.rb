@@ -18,5 +18,6 @@ get '/about' do
 end
 
 get '/menu' do
+	@products = Product.all
 	erb :menu
 end
