@@ -10,14 +10,10 @@ class Product < ActiveRecord::Base
 end
 
 get '/' do
+	@products = Product.all
 	erb :index
 end
 
 get '/about' do
   erb :about
-end
-
-get '/menu' do
-	@products = Product.all
-	erb :menu
 end
