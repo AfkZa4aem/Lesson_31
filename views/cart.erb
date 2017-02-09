@@ -1,0 +1,24 @@
+<h2>Cart here</h2>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+		<!-- 	<th>#</th> -->
+			<th>Name</th>
+			<th>Qty</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+	<tbody>
+
+	<% @items.each do |item| %>	
+		<tr>
+			<!-- <th>ite</th> -->
+			<td><%= item[0].title %></td>
+			<td><%= item[1] %></td>
+			<td><%= item[0].price  %></td>
+		</tr>
+	<% end %>
+
+	</tbody>
+</table>
