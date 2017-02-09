@@ -1,1 +1,24 @@
 <h1>this is cart</h1>
+
+<table class="table">
+<tbody>
+	<% @order = 0 %>
+	<% @ordered_pizza.each do |pizza| %>
+		<% key = (pizza.split('=')[0]).split('_')[1] %>
+		<% value = pizza.split('=')[1] %>
+		<% menu = @products.find(key) %>
+		<% final_price = menu[:price] * value.to_i %>
+	<tr>
+			<td><%= menu[:title] %></td>
+			<td><%= value %></td>
+			<td><%= final_price %>
+					<% @order += final_price %>
+			</td>
+	</tr>
+	<% end %>
+	<tr>
+		<td></td>
+		<td>Summary:</td>
+		<td><%= @order %></td>
+	</tr>
+</tbody>
