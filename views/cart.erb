@@ -29,3 +29,26 @@
 		</tr>
 	</tbody>
 </table>
+
+<form action="/place_order" method="POST" role="form">
+
+	<input type="hidden" name="order[orders_input]" value="<%= @orders_input %>" />
+
+	<div cless="form-group">
+		<label>Name:</label>
+		<input type="text" name="order[name]" class="form-control" placeholder="Enter your name" >
+	</div>
+
+	<div cless="form-group">
+		<label>Phone:</label>
+		<input type="text" name="order[phone]" class="form-control" placeholder="Enter your phone" >
+	</div>
+
+	<div cless="form-group">
+		<label>Adress:</label>
+		<textarea type="text" name="order[adress]" class="form-control" placeholder="Delivery adress" >
+		</textarea>
+	</div>
+	<br/>
+	<button type="submit" class="btn btn-success btn-lg">Place this order!</button>
+</form>
