@@ -9,6 +9,9 @@ set :database, "sqlite3:pizzashop.db"
 class Product < ActiveRecord::Base
 end
 
+class Order < ActiveRecord::Base
+end
+
 get '/' do
 	@products = Product.all
 	erb :index
@@ -30,6 +33,10 @@ post '/cart' do
 	erb :cart
 end
 
+post '/place_order' do
+
+end
+
 def parse_orders_input orders_input
 	s1 = orders_input.split(',')
 	arr = []
@@ -43,3 +50,5 @@ def parse_orders_input orders_input
 	end
 	return arr
 end
+
+
