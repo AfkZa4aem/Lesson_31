@@ -1,1 +1,23 @@
 <h2>Orders:</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+      <!--  <th>#</th> -->
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @orders.each do |order| %> 
+      <tr>
+        <!-- <th>ite</th> -->
+        <td><%= order.name %></td>
+        <td><%= order.phone %></td>
+        <td><%= order.address  %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+

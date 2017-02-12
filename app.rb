@@ -43,6 +43,7 @@ post '/place_order' do
 end
 
 get '/admin' do
+	@orders = Order.all
 	erb :admin
 end
 
